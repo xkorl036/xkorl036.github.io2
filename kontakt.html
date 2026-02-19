@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Paliva Vlašim</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="kontakt-page">
+
+    <header class="site-header" style="background-color: #222; background-image: url('img/navbar.jpg'); background-repeat: repeat;">
+        <div class="header-inner">
+            
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.jpg" alt="Forsett Logo" class="header-logo-img">
+                    <span class="header-logo-text">Paliva Vlašim</span>
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/index.html" >Úvod</a></li>
+                    <li><a href="/cenik.html" >Ceník</a></li>
+                    <li><a href="/doprava.html" >Doprava</a></li>
+                    <li><a href="/kontakt.html" class="active">Kontakt</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="content-wrapper kontakt-layout">
+        <div class="contact-three-cols">
+            
+            <div class="contact-col form-col">
+                 <form class="contact-form" action="https://formsubmit.co/korinek.luky@seznam.cz" method="POST">
+                    
+                    <div class="form-group">
+                        <label>Jméno a příjmení</label>
+                        <input type="text" name="Jméno" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="email" name="E-mail" placeholder="@" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Zpráva</label>
+                        <textarea name="Zpráva" rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-black">Odeslat</button>
+                </form>
+            </div>
+
+            <div class="contact-col map-col">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d20638.281378886863!2d14.927843999999999!3d49.714846!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c6275d9597fb7%3A0x5258359d84b38b2e!2sPavlovice%2072%2C%20258%2001%20Pavlovice%2C%20%C4%8Cesko!5e0!3m2!1scs!2sus!4v1771507320980!5m2!1scs!2sus"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <div class="contact-col info-col">
+                
+                <div class="info-row">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div class="info-text">
+                        <strong>PALIVA VLAŠIM</strong><br>
+                        Vlašim, Pavlovice
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <i class="fa-solid fa-phone"></i>
+                    <div class="info-text">
+                        +420 608 66 88 44
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <i class="fa-regular fa-envelope"></i>
+                    <div class="info-text">
+                        info@doprava-vlasim.cz
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer">
+            <p>&copy; 2021 Doprava Vlašim</p>
+        </div>
+    </footer>
+
+</body>
+</html>
