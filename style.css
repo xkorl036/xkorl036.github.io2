@@ -1,0 +1,165 @@
+/* Základní čistý reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #333;
+    line-height: 1.7;
+    background-color: #ffffff; /* Čistě bílé pozadí celé stránky */
+}
+
+/* Hlavička (Bílá s černým textem, typická pro šablony) */
+.site-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    padding: 20px 0;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #222;
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    margin-left: 30px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.main-nav ul li a:hover, 
+.main-nav ul li a.active {
+    color: #000; /* Zvýraznění aktivní položky */
+}
+
+.arrow {
+    font-size: 0.7rem;
+    margin-left: 5px;
+}
+
+/* Úvodní obrázek */
+.hero-banner {
+    height: 400px;
+    background-color: #f4f4f4;
+    background-image: url('https://via.placeholder.com/1920x600?text=Velka+Fotka+Na+Uvod');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-content h1 {
+    color: #ffffff;
+    font-size: 3.5rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Hlavní obsah - Produkty v řádcích */
+.content-wrapper {
+    max-width: 1000px; /* Užší obsah pro lepší čtení */
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.product-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #eaeaea; /* Jemná oddělovací čára */
+}
+
+.product-row:last-child {
+    border-bottom: none;
+}
+
+.product-image {
+    flex: 0 0 45%; /* Obrázek zabere 45% šířky */
+    margin-right: 5%;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 3px;
+}
+
+.product-text {
+    flex: 1; /* Text zabere zbytek */
+}
+
+.product-text h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.product-text p {
+    font-size: 1.05rem;
+    color: #555;
+    text-align: justify;
+}
+
+/* Jednoduchá patička */
+.site-footer {
+    background-color: #f9f9f9;
+    padding: 30px 0;
+    text-align: center;
+    color: #777;
+    font-size: 0.9rem;
+    border-top: 1px solid #eaeaea;
+}
+
+/* Mobilní zobrazení */
+@media (max-width: 768px) {
+    .header-inner {
+        flex-direction: column;
+    }
+    .main-nav ul {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-nav ul li {
+        margin: 5px 15px;
+    }
+    .product-row {
+        flex-direction: column;
+    }
+    .product-image {
+        margin-right: 0;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+}
