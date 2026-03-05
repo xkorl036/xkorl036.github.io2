@@ -220,7 +220,7 @@ body {
     font-weight: 700;
     font-size: 1.3rem;
     color: #222;
-    white-space: nowrap; /* Zakáže zalomení ceny na dva řádky */
+    white-space: nowrap; /* zakáže zalomení ceny na dva řádky */
     margin-left: 20px;
 }
 
@@ -248,7 +248,7 @@ body {
     text-align: center;
 }
 
-/* Responzivita pro mobily (na mobilu hodíme cenu pod název) */
+/* RESPONZIVITA */
 @media (max-width: 600px) {
     .price-header {
         flex-direction: column;
