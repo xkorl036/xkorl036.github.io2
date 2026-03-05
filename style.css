@@ -184,62 +184,86 @@ body {
 }
 
 /* --- STYLY PRO PODSTRÁNKU CENÍK --- */
-/* Kontejner ceníku */
-.pricing-container {
-    background: #fff;
-    padding: 40px 0;
+
+.pricing-list-container {
+    max-width: 1000px;
+    margin: 40px auto 20px auto;
+    background: transparent;
 }
 
-.clean-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 30px;
-    font-size: 1.05rem;
+.price-item {
+    border-bottom: 1px solid #d4d4d4;
+    padding: 25px 0;
 }
 
-.clean-table th, 
-.clean-table td {
-    padding: 15px 20px;
-    text-align: left;
-    border-bottom: 1px solid #eaeaea;
+.price-item:last-child {
+    border-bottom: none;
 }
 
-.clean-table th {
-    background-color: #f9f9f9;
-    font-weight: 600;
+/* FLEXBOX */
+.price-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline; 
+    margin-bottom: 8px;
+}
+
+/* NADPIS PRODUKTU */
+.price-title {
+    font-weight: 700;
+    font-size: 1.3rem;
     color: #222;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
 }
 
-.clean-table tbody tr:hover {
-    background-color: #fcfcfc;
+/* CENA */
+.price-value {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #222;
+    white-space: nowrap; /* Zakáže zalomení ceny na dva řádky */
+    margin-left: 20px;
 }
 
-/* UPOZORNĚNÍ POD TABULKOU */
+/* PODTITULEK (SVĚTLEJŠÍ A MENŠÍ TEXT) */
+.price-desc {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.5;
+    max-width: 85%;
+}
+
+/* UPOZORNĚNÍ POD CENÍKEM */
 .pricing-notice {
-    background-color: #fff9e6;
-    border-left: 4px solid #f1c40f;
-    padding: 15px 20px;
-    margin-top: 20px;
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+    background-color: transparent;
+    padding: 15px 0;
+    border-top: 1px solid #d4d4d4;
 }
 
 .pricing-notice p {
-    font-size: 0.95rem;
-    color: #555;
+    font-size: 1.3rem;
+    color: #666;
     margin: 0;
+    text-align: center;
 }
 
-/* RESPONZIVNÍ TABULKA PRO MOBIL - UMOŽNÍ SCROLLOVÁNÍ DO STRAN, ABY SE NEROZHODIL WEB */
-@media (max-width: 768px) {
-    .pricing-container {
-        overflow-x: auto;
+/* Responzivita pro mobily (na mobilu hodíme cenu pod název) */
+@media (max-width: 600px) {
+    .price-header {
+        flex-direction: column;
+        align-items: flex-start;
     }
-    .clean-table {
-        min-width: 600px;
+    .price-value {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+    .price-desc {
+        max-width: 100%;
+        margin-top: 8px;
     }
 }
+
 
 /* --- STYLY PRO PODSTRÁNKU DOPRAVA --- */
 
