@@ -1,4 +1,4 @@
-/* Základní čistý reset */
+/* --- TĚLO --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,25 +11,27 @@ body {
     line-height: 1.7;
     background-image: url(img/background.jpg)
 }
-/
-/* --- NOVÁ HLAVIČKA (TMAVÁ S VZOREM A LOGEM) --- */
+
+/* --- HLAVIČKA --- */
 
 .site-header {
-    padding: 15px 0; 
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-bottom: none; 
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3); 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    background-image: url('img/navbar.jpg');
+    background-repeat: repeat;
 }
 
 .header-inner {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Rozložení Loga a Textu */
+/* ROZLOŽENÍ LOGA A TEXTU */
 .logo a {
     display: flex;
     align-items: center;
@@ -37,21 +39,21 @@ body {
 }
 
 .header-logo-img {
-    height: 60px; /* Výška čtvercového loga s ohněm */
+    height: 60px;
     width: auto;
-    margin-right: 20px; /* Mezera mezi logem a textem */
-    border-radius: 2px; /* Drobné zakulacení rohů, pokud je potřeba */
+    margin-right: 20px;
+    border-radius: 2px;
 }
 
 .header-logo-text {
-    font-family: 'Times New Roman', Times, serif; /* Patkový font z obrázku */
+    font-family: 'Times New Roman', Times, serif;
     font-size: 2.2rem;
     font-weight: bold;
-    color: #ffffff; /* Čistě bílý text */
+    color: #ffffff;
     letter-spacing: 0.5px;
 }
 
-/* Navigační menu */
+/* NAVIGAČNÍ MENU */
 .main-nav ul {
     list-style: none;
     display: flex;
@@ -61,29 +63,29 @@ body {
 }
 
 .main-nav ul li {
-    margin-left: 40px; /* Větší mezery mezi odkazy přesně jako na obrázku */
+    margin-left: 40px; /* větší mezery mezi odkazy */
 }
 
 .main-nav ul li a {
     text-decoration: none;
-    color: #ffffff; /* Bílé písmo */
-    font-family: 'Open Sans', Arial, sans-serif; /* Bezpatkový font */
-    font-size: 1.15rem; /* O něco větší text */
-    font-weight: 600; /* Tučnější písmo */
-    padding-bottom: 5px; /* Mezera mezi textem a podtrhávací čárou */
+    color: #ffffff;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding-bottom: 5px;
     transition: opacity 0.2s;
 }
 
 .main-nav ul li a:hover {
-    opacity: 0.8; /* Místo barvy se při najetí lehce zprůhlední (elegantnější) */
+    opacity: 0.7; /* text v navigačním menu se při najetí lehce zprůhlední */
 }
 
-/* Tlusté podtržení aktuální stránky (Kontakt) */
+/* PODTRŽENÍ AKTUÁLNÍ STRÁNKY */
 .main-nav ul li a.active {
     border-bottom: 3px solid #ffffff; 
 }
 
-/* Responzivita (Mobily) */
+/* RESPONZIVITA (MOBILY) */
 @media (max-width: 850px) {
     .header-inner {
         flex-direction: column;
@@ -98,29 +100,9 @@ body {
     }
 }
 
-/* Úvodní obrázek */
-.hero-banner {
-    height: 400px;
-    background-color: #f4f4f4;
-    background-image: url('https://via.placeholder.com/1920x600?text=Velka+Fotka+Na+Uvod');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.banner-content h1 {
-    color: #ffffff;
-    font-size: 3.5rem;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.4);
-    text-align: center;
-    padding: 0 20px;
-}
-
-/* Hlavní obsah - Produkty v řádcích */
+/* --- HLAVNÍ OBSAH - PRODUKTY (ÚVOD) --- */
 .content-wrapper {
-    max-width: 1000px; /* Užší obsah pro lepší čtení */
+    max-width: 1000px;
     margin: 60px auto;
     padding: 0 20px;
 }
@@ -130,7 +112,7 @@ body {
     align-items: flex-start;
     margin-bottom: 60px;
     padding-bottom: 60px;
-    border-bottom: 1px solid #eaeaea; /* Jemná oddělovací čára */
+    border-bottom: 1px solid #eaeaea;
 }
 
 .product-row:last-child {
@@ -138,7 +120,7 @@ body {
 }
 
 .product-image {
-    flex: 0 0 45%; /* Obrázek zabere 45% šířky */
+    flex: 0 0 45%;
     margin-right: 5%;
 }
 
@@ -150,7 +132,7 @@ body {
 }
 
 .product-text {
-    flex: 1; /* Text zabere zbytek */
+    flex: 1;
 }
 
 .product-text h2 {
@@ -166,17 +148,19 @@ body {
     text-align: justify;
 }
 
-/* Jednoduchá patička */
+/* PATIČKA */
 .site-footer {
-    background-color: #f9f9f9;
-    padding: 30px 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
     text-align: center;
-    color: #777;
+    color: #ffffff;
     font-size: 0.9rem;
     border-top: 1px solid #eaeaea;
+    background-image: url('img/navbar.jpg');
+    background-repeat: repeat;
 }
 
-/* Mobilní zobrazení */
+/* MOBILNÍ ZOBRAZENÍ */
 @media (max-width: 768px) {
     .header-inner {
         flex-direction: column;
@@ -200,34 +184,12 @@ body {
 }
 
 /* --- STYLY PRO PODSTRÁNKU CENÍK --- */
-
-/* Menší banner pro podstránky (nepotřebuje být tak obrovský jako na úvodu) */
-.page-banner {
-    height: 250px;
-    background-color: #f4f4f4;
-    background-image: url('https://via.placeholder.com/1920x400?text=Obrazek+Ceniku');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.page-banner h1 {
-    color: #ffffff;
-    font-size: 2.5rem;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.4);
-    text-align: center;
-    padding: 0 20px;
-}
-
 /* Kontejner ceníku */
 .pricing-container {
     background: #fff;
     padding: 40px 0;
 }
 
-/* Čistá tabulka Webnode stylu */
 .clean-table {
     width: 100%;
     border-collapse: collapse;
@@ -255,10 +217,10 @@ body {
     background-color: #fcfcfc;
 }
 
-/* Upozornění pod tabulkou */
+/* UPOZORNĚNÍ POD TABULKOU */
 .pricing-notice {
-    background-color: #fff9e6; /* Jemně žluté pozadí pro upozornění */
-    border-left: 4px solid #f1c40f; /* Žlutý pruh vlevo */
+    background-color: #fff9e6;
+    border-left: 4px solid #f1c40f;
     padding: 15px 20px;
     margin-top: 20px;
 }
@@ -269,103 +231,88 @@ body {
     margin: 0;
 }
 
-/* Responzivní tabulka pro mobil - umožní scrollování do stran, aby se nerozhodil web */
+/* RESPONZIVNÍ TABULKA PRO MOBIL - UMOŽNÍ SCROLLOVÁNÍ DO STRAN, ABY SE NEROZHODIL WEB */
 @media (max-width: 768px) {
     .pricing-container {
         overflow-x: auto;
     }
     .clean-table {
-        min-width: 600px; /* Na malých obrazovkách tabulka "vyteče" a půjde posouvat prstem */
+        min-width: 600px;
     }
 }
 
-/* --- SPECIFICKÉ STYLY PRO STRÁNKU DOPRAVA (PODLE OBRÁZKU) --- */
+/* --- STYLY PRO PODSTRÁNKU DOPRAVA --- */
 
-/* 1. Nastavení pozadí stránky (jemně šedá/textura místo čistě bílé) */
-body.doprava-page {
-    background-color: #f4f4f4; /* Záložní jemně šedá barva */
-    /* Pokud bys měl obrázek textury, vložil bys ho sem:
-       background-image: url('textura-pozadi.png'); */
-}
-
-/* Aby obsah nebyl nalepený hned pod menu */
+/* ABY OBSAH NEBYL NALEPENÝ HNED POD MENU */
 .transport-layout {
     margin-top: 40px;
 }
 
-/* 2. Horní sekce (Obrázek vlevo, text vpravo) */
+/* HORNÍ SEKCE (OBRÁZEK VPRAVO, TEXT VLEVO) */
 .top-section {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 20px; /* Mezera mezi horní a spodní částí */
-    gap: 30px;           /* Mezera mezi horní fotkou a textem */
-    width: 100%;         /* Vynucení plné šířky */
+    margin-bottom: 20px;
+    gap: 30px;
+    width: 100%;
 }
 
 .transport-main-image {
-    flex: 0 0 50%; /* Obrázek zabere přesně polovinu šířky */
+    flex: 0 0 50%;
 }
 
 .transport-main-image img {
     width: 100%;
     height: auto;
     display: block;
-    /* Na vzorovém obrázku fotky nemají stíny ani rámečky */
 }
 
 .transport-text {
-    flex: 1; /* Text zabere zbytek místa */
-    padding-top: 0; /* Aby text začínal ve stejné výšce jako obrázek */
+    flex: 1;
+    padding-top: 0;
 }
 
-/* 3. Specifický styl nadpisu "Doprava" (PATKOVÝ FONT) */
+/* STYL NADPISU "DOPRAVA" */
 .transport-text h2 {
-    font-family: 'Times New Roman', Times, serif; /* Patkový font podle obrázku */
+    font-family: 'Times New Roman', Times, serif;
     font-size: 2.2rem;
     color: #222;
     margin-bottom: 20px;
-    margin-top: -5px; /* Drobná korekce, aby lícoval s horní hranou fotky */
+    margin-top: -5px;
     font-weight: bold;
 }
 
 .transport-text p {
-    font-family: 'Open Sans', Arial, sans-serif; /* Nebo font, který používáš */
+    font-family: 'Open Sans', Arial, sans-serif;
     font-size: 1.05rem;
     line-height: 1.7;
     color: #555;
-    text-align: justify; /* TOTO JE KLÍČOVÉ: Zarovná text přesně po pravou hranu */
+    text-align: justify; /* !zarovná text přesně po pravou hranu! */
     margin: 0;
 }
 
-/* 4. Úprava spodní mřížky 4 obrázků */
+/* SPODNÍ MŘÍŽKA 4 OBRÁZKŮ */
 .four-images-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Rozdělí přesně na 4 stejné díly */
-    gap: 15px;           /* Mezery mezi fotkami dole */
-    width: 100%;         /* Vynucení plné šířky */
+    grid-template-columns: repeat(4, 1fr); /* rozdělí přesně na 4 stejné díly */
+    gap: 15px;
     margin-top: 0;
-    width: 100% !important; /* Mřížka se musí vejít do obalu */
+    width: 100% !important; /* mřížka se vejde do obalu */
     box-sizing: border-box;
     margin-left: 0;
     margin-right: 0;
 }
 
 .four-images-grid .gallery-item img {
-    height: 220px; /* Fixní výška pro sjednocení */
+    height: 220px; /* fixní výška pro sjednocení */
     object-fit: cover;
 }
 
-/* Na vzorovém obrázku spodní fotky nemají stíny ani zaoblené rohy */
-.box-shadow-images .gallery-item {
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    background: transparent;
-}
 
-/* Mobilní zobrazení pro tuto stránku */
+/* MOBILNÍ ZOBRAZENÍ */
 @media (max-width: 900px) {
     .top-section {
-        flex-direction: column; /* Na mobilu obrázek nad textem */
+        flex-direction: column;
     }
     .transport-main-image {
         flex: 0 0 100%;
@@ -373,33 +320,27 @@ body.doprava-page {
     }
 }
 
-/* --- FINÁLNÍ OPRAVA PŘETÉKÁNÍ OBRÁZKŮ (STRÁNKA DOPRAVA) --- */
+/* OPRAVA PŘETÉKÁNÍ OBRÁZKŮ (PODSTRÁNKA DOPRAVA) */
 
-/* 1. Omezení šířky hlavního obalu a jeho vycentrování */
+/* OMEZENÍ ŠÍŘKY HLAVNÍHO OBALU A JEHO VYCENTROVÁNÍ */
 .content-wrapper.transport-layout {
-    max-width: 1200px !important; /* Vynutíme maximální šířku, aby se obsah neroztahoval do nekonečna */
-    width: 100%;                  /* Jinak zabere plnou dostupnou šířku až do těch 1200px */
-    margin-left: auto !important; /* Automatický okraj vlevo */
-    margin-right: auto !important;/* Automatický okraj vpravo -> tím se obsah vycentruje */
-    padding-left: 20px;           /* Ochranný okraj, aby se text nelepil na hrany mobilu */
+    max-width: 1200px !important;
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;       /* Zajistí, že padding nerozšíří stránku */
-    overflow: hidden;             /* Kdyby náhodou něco chtělo přéct, usekne se to */
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
-/* Toto zajistí, že žádný obrázek v této sekci NIKDY nebude širší než jeho sloupec */
 .transport-layout img {
     max-width: 100%;
     height: auto;
 }
 
 
-/* --- STYLY PRO STRÁNKU KONTAKT (PODLE OBRÁZKU) --- */
-
-/* Pozadí stránky */
-body.kontakt-page {
-    background-color: #f4f4f4; /* Jemná šedá podle obrázku */
-}
+/* --- STYLY PRO PODSTRÁNKU KONTAKT --- */
 
 .kontakt-layout {
     max-width: 1200px !important;
@@ -408,15 +349,15 @@ body.kontakt-page {
     padding: 0 20px;
 }
 
-/* 3 Sloupce vedle sebe */
+/* 3 SLOUPCE VEDLE SEBE */
 .contact-three-cols {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Tři naprosto stejné sloupce */
-    gap: 40px; /* Mezery mezi sloupci */
+    grid-template-columns: 1fr 1fr 1fr; /* tři identické sloupce */
+    gap: 40px;
     align-items: flex-start;
 }
 
-/* --- 1. SLOUPEC: Formulář --- */
+/* 1. SLOUPEC: FORMULÁŘ */
 .form-col .form-group {
     margin-bottom: 20px;
 }
@@ -426,7 +367,7 @@ body.kontakt-page {
     margin-bottom: 5px;
     font-size: 0.95rem;
     color: #444;
-    font-weight: normal; /* Na obrázku nejsou popisky tučně */
+    font-weight: normal;
 }
 
 .form-col input,
@@ -442,12 +383,12 @@ body.kontakt-page {
     box-sizing: border-box;
 }
 
-/* Zástupný znak zavináče */
+/* ZÁSTUPNÝ ZNAK ZAVINÁČE */
 .form-col input::placeholder {
     color: #aaa;
 }
 
-/* Černé tlačítko */
+/* TLAČÍTKO "ODESLAT" */
 .btn-black {
     background-color: #1a1a1a;
     color: #fff;
@@ -462,29 +403,29 @@ body.kontakt-page {
 }
 
 .btn-black:hover {
-    background-color: #444;
+    background-color: #505050;
 }
 
-/* --- 2. SLOUPEC: Mapa --- */
+/* 2. SLOUPEC: MAPA */
 .map-col iframe {
     width: 100%;
-    height: 350px; /* Odpovídá zhruba výšce formuláře */
+    height: 350px;
     border-radius: 2px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Velmi jemný stínek */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* --- 3. SLOUPEC: Ikonky a text --- */
+/* 3. SLOUPEC: KONTAKTNÍ INFO */
 .info-col {
     display: flex;
     flex-direction: column;
-    gap: 35px; /* Mezery mezi jednotlivými řádky s ikonkami */
+    gap: 35px;
     padding-top: 5px;
 }
 
 .info-row {
     display: flex;
     align-items: flex-start;
-    gap: 15px; /* Mezera mezi ikonkou a textem */
+    gap: 15px;
     color: #333;
 }
 
@@ -492,7 +433,7 @@ body.kontakt-page {
     font-size: 1.4rem;
     color: #555;
     margin-top: 2px;
-    width: 25px; /* Fixní šířka, aby texty pod sebou lícovaly */
+    width: 25px;
     text-align: center;
 }
 
@@ -506,7 +447,7 @@ body.kontakt-page {
     font-size: 1.1rem;
 }
 
-/* Responzivita: Na menších monitorech a mobilech se přeskládají pod sebe */
+/* RESPONZIVITA */
 @media (max-width: 950px) {
     .contact-three-cols {
         grid-template-columns: 1fr; /* Na mobilu 1 sloupec */
@@ -524,10 +465,10 @@ body.kontakt-page {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Říká: Tělo webu musí mít vždy minimálně 100 % výšky okna */
+    min-height: 100vh;
 }
 
-/* Hlavní obsah se roztáhne a zatlačí patičku dolů */
+/* HLAVNÍ OBSAH SE ROZTÁHNE A ZATLAČÍ PATIČKU DOLŮ */
 .content-wrapper {
     flex: 1; 
 }
